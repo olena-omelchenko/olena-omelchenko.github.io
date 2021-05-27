@@ -1,0 +1,149 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+}
+
+body {
+	background-color: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Kulim Park', sans-serif;
+}
+
+h1 {
+	font-weight: 700;
+	color: #150140;
+	font-size: 2rem;
+	max-width: 650px;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	margin-bottom: .25em;
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	color: #150140;
+	font-size: 1rem;
+	margin-bottom: .5em;
+}
+
+
+.container-fluid,
+.container {
+    margin: 0 auto; /* Центрування по-горизонталі */
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    max-width: 1280px; /* Обмеження ширини контенту всередині секцій */
+    position: relative;
+    padding: 25px;
+}
+
+.top-corn {
+	position: relative;
+	z-index:2;
+}
+
+.bot-corn {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width:100%;
+	height:100%;
+	z-index:2;
+}
+
+.top-corn::before,
+.top-corn::after,
+.bot-corn::before,
+.bot-corn::after {
+	content:"";
+	display:block;
+	position:absolute;
+	top:0;
+	width: 1.25em;
+	height: 1.25em;
+}
+
+#top.top-corn::before,
+#top.top-corn::after {
+	top:40px;
+}
+
+#top .bot-corn::before,
+#top .bot-corn::after {
+	bottom:40px;
+	top: auto;
+}
+
+.top-corn::before,
+.bot-corn::before { left: 0; }
+.top-corn::after,
+.bot-corn::after { right: 0; }
+
+#top.top-corn::before,
+#top .bot-corn::before { left: 50px; }
+#top.top-corn::after,
+#top .bot-corn::after { right: 50px; }
+
+.bot-corn::before,
+.bot-corn::after {
+	bottom:0;
+	top: auto;
+}
+
+.top-corn::before { 
+	border-left: .25em solid #150140;
+	border-top: .25em solid #150140;
+	 }
+
+.top-corn::after { 
+	border-right: .25em solid #150140;
+	border-top: .25em solid #150140;
+	}
+
+.bot-corn::before { 
+	border-left: .25em solid #150140;
+	border-bottom: .25em solid #150140;
+	 }
+
+.bot-corn::after { 
+	border-right: .25em solid #150140;
+	border-bottom: .25em solid #150140;
+	}
+
+#top.top-corn::before,
+#top.top-corn::after,
+#top .bot-corn::before,
+#top .bot-corn::after {
+	border-color: #ccc;
+}
+
+.imgbackgound {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+	z-index:-2;
+}
+
+.slides {
+	
+}

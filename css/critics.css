@@ -1,0 +1,24 @@
+.slides {
+	display:flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+.slide fl fl-left {
+	justify-content: flex-end;
+	padding-left:25px;
+}
+
+.slide fl fl-right {
+	justify-content: flex-start;
+	padding-right:25px;
+}
+
+.slides .img-box {
+	width: 50%;
+	margin-top: 20px;
+}
+
+.slide .box top-corn {
+	padding-top: 0;
+}
